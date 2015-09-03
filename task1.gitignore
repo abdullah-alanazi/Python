@@ -1,0 +1,32 @@
+max,min,t = 100,1,0
+avg = (max + min) // 2
+n = input("Hi, what is your Name?")
+print("Hello "+ n + "! Let\'s play a game!" )
+print("Think of random number from 1 to 100, and I\'ll try to guess it!\n")
+while avg !=0 :
+        print("Is it" , avg ,"? (yes/no)")
+        guess_n = input(" ")
+        if(guess_n== "yes"):
+                t += 1
+                print("Yeey! I got it in ", t , " tries!")
+                print("Do you want to play more?" )
+                ask = input(" ")
+                if(ask == "yes"):
+                        max,min,t=100,1,0
+                        avg=(max+min)//2
+                        ask == guess_n
+                else:
+                        print("Bye-bye")
+                        break
+        else:
+                print("Is the number larger than ",avg ,"?")
+                guess_p=input(" ")
+                t+=1
+                if(guess_p == "yes"):
+                        min = avg
+                        avg = (max+min)//2
+                elif(guess_p == "no"):
+                        max = avg
+                        avg = (max+min)//2
+
+                        
