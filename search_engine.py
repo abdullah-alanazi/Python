@@ -85,14 +85,13 @@ loo=2557
 while(loo >0):
     q1=input("Query is:")
     q1 = set(q1.split())
-    if ("and" not in q1 and "or" in q1):
-        op = "_OR_"
-    else:
-        op = "_AND_"
-    if ("and" in q1):
-        q1.remove("and")
     if ("or" in q1):
-        q1.remove("or")
+        op = "_OR_"
+    if ("and" in q1 or "and" and "or" not in q1 ):
+        op = "_AND_"
+    if ("and" and "or" in q1):
+        q1.remove("and"and "or")
+
     if len(q1) > 0:
         break
     else:
